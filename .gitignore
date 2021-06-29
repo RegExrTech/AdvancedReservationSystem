@@ -1,1 +1,3 @@
+*.pyc
+*/*.pyc
 Utils/tokens.json

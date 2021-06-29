@@ -23,8 +23,6 @@ for message in messages:
 	user_id = message['mentions'][0]['id']
 	level = int(message['content'].split("level ")[1].split("!")[0])
 	username = message['mentions'][0]['username']
-	if user_id != '333321993036365826':
-		continue
 	if level >= THRESHOLD and user_id not in users['active']:
 		users['active'].append(user_id)
 		discord_helper.send_request(discord_helper.PUT, roleAssignmentURL.format(user_id), constants.headers)
